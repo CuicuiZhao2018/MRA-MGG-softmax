@@ -6,7 +6,7 @@ Cuicui Zhao, Jun Liu, Xinqi Gong
 
 Import manopt first by running importmanopt.m file under manopt file.
 
-Run main_random_signal.m and main_shard_constant_signal.m to repeat some experiments from section 第几节 of the paper.
+Run main_random_signal.m and main_shard_constant_signal.m to repeat some experiments in the paper.
 
 Requirements:
 
