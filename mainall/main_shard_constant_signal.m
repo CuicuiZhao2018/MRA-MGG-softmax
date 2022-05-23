@@ -30,7 +30,7 @@ sigma2_true = 0.1;
 %% Estimate x from the data through an adaptive variational model
 alpha=0.5;
 sigma1=50;
-sigma2=1;
+sigma2=0.9;
 lam=5;
 r=20*lam;
 tic_EM_proposed = tic();
