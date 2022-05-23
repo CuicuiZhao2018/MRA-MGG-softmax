@@ -6,7 +6,7 @@ for m=1:M
     f(:,m)=tempf;
 end
 fenmu1=sigma1.^2.*(1-Q)+sigma2.^2.*Q;
-temp=r.*sigma1.^2+sigma2.^2;
+temp=r.*(sigma1.^2)*(sigma2.^2);
 d=(sum(fenmu1.*f,2)+temp.*(u+p))./(sum(fenmu1,2)+temp+1e-50);
 d(d>1)=1;
 d(d<0)=0;
