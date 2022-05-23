@@ -123,6 +123,16 @@ hold all;
 t = 0:(N-1);
 plot(t, x_true, 'k-');
 plot(t,x_proposed ,'r.-');
+title(sprintf('Multireference alignment example, M = %d, sigma = %g', M, sigma));
+h=legend('True signal', ...
+    sprintf('Proposed model (RMSE: %.4g; time: %.4g [s])', relerr_proposed, time_proposed));
+set(h,'fontsize',7);
+xlim([0, N-1]);
+ylim([0, 1.5]);
+hold off;
+figure(2),
+hold on;
+plot(t, x_true, 'k-');
 plot(t, x_original_em, 'g.-');
 plot(t, x_est_1, 'b.-','linewidth',0.1);
 plot(t, x_est_2, 'c--o');
@@ -130,12 +140,11 @@ plot(t, x_est_3, 'm-','linewidth',0.4);
 plot(t, x_est_4, 'r-*','linewidth',0.7);
 title(sprintf('Multireference alignment example, M = %d, sigma = %g', M, sigma));
 h=legend('True signal', ...
-    sprintf('Proposed model (RMSE: %.4g; time: %.4g [s])', relerr_proposed, time_proposed),...
     sprintf('Expectation maximization (RMSE: %.4g; time: %.4g [s])', relerr_em, time_em),...
     sprintf('Spectral M. largest spectral gap (RMSE: %.4g; time: %.4g [s])', relerr_invfeatmra_1, time_invfeatmra_1), ...
     sprintf('Invariant features, optim. phase manifold (RMSE: %.4g; time: %.4g [s])', relerr_invfeatmra_2, time_invfeatmra_2), ...
     sprintf('Invariant features, FM (RMSE: %.4g; time: %.4g [s])', relerr_invfeatmra_3, time_invfeatmra_3), ...
     sprintf('Invariant features,iter, phase synch(RMSE: %.4g; time: %.4g [s])', relerr_invfeatmra_4, time_invfeatmra_4));
-   set(h,'fontsize',7);
+set(h,'fontsize',7);
 xlim([0, N-1]);
 ylim([0, 1.5]);
