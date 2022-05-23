@@ -1,5 +1,5 @@
-%% ÎÄÕÂÃû³Æ£¬×÷Õß
-%´úÂëµÄÍøÖ·
+%% æ–‡ç« åç§°ï¼Œä½œè€…
+%ä»£ç çš„ç½‘å€
 clc;clear all;close all;
 addpath('../utilities')
 
@@ -33,9 +33,9 @@ sigma2_true = 0.1;
 %% Estimate x from the data through an adaptive variational model
 alpha=0.5;
 sigma1=50;
-sigma2=0.15;
-lam=5;
-r=2000*lam;
+sigma2=1;
+lam=20;
+r=200*lam;
 tic_EM_proposed = tic();
 u=MRA_MGG_softmax(X_data,alpha,sigma1,sigma2,lam,r);
 time_proposed=toc(tic_EM_proposed);
