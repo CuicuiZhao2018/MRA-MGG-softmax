@@ -12,7 +12,7 @@ Q(Q>=.5)=1;
 Q(Q<.5)=0;
 end
 function p=Gaussian_pdf(x,sigma)
-p=1./(sigma+eps).*exp(-x.^2./(2*sigma^2+1));
+p=1./(sigma+eps).*exp(-x.^2./(2*sigma^2+eps));
 end
 % w(w>=.5)=1;
 % w(w<.5)=0;
@@ -21,7 +21,7 @@ end
 % ind=find(w==1);
 % ind=mod(ind,N);
 % Trans_l=ind-1;
-% %问题应该是处在ind上
+% %脦脢脤芒脫娄赂脙脢脟麓娄脭脷ind脡脧
 % tempu=zeros(N,M);
 % for t=1:numel(Trans_l)
 %     tempu(:,t)=circshift(u,Trans_l(t));
